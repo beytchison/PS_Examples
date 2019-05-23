@@ -1,0 +1,1 @@
+Get-ADObject -filter {(ObjectClass -eq "computer") -and (operatingsystem -notlike "*") -or (operatingsystem -like "*server*")} | Set-ADObject -ProtectedFromAccidentalDeletion:$false
